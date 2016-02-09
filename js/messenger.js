@@ -88,7 +88,7 @@ $(document).ready(function () {
   }).on("focus", function () {
     isBlurred = false;
     clearInterval(timerId);
-    document.title = "Pub Messenger";
+    document.title = "The A Level Messenger";
   });
 
   // Request permission for desktop notifications.
@@ -270,14 +270,14 @@ $(document).ready(function () {
       // Flash title if blurred
       clearInterval(timerId);
       timerId = setInterval(function () {
-        document.title = document.title == "Pub Messenger" ? "New Message" : "Pub Messenger";
+        document.title = document.title == "The A Level Messenger" ? "New Message" : "The A Level Messenger";
       }, 2000);
 
       // Notification handling
       if (notificationPermission === 0 && message.username !== username) {
         var notification = window.webkitNotifications.createNotification(
           'icon.jpg',
-          'PubNub Messenger Notification',
+          'The A Level Messenger Notification',
           message.username + " said " + message.text
         );
 
